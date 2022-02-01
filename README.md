@@ -43,3 +43,4 @@ python3 script-Setup.py
 When install pydirectinput
 Go to libaray file and delete all lines have "sleep"
 ```
+**Script still have some bugs**
