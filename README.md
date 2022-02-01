@@ -30,10 +30,10 @@ https://github.com/0xSE/steering-wheel-opencv-mediapipe.git
 Running script-Setup.py file
 **For windows users use:**
 ```
-game-Setup.py
+python script-Setup.py
 ```
 
 **For linux or macOS use:**
 ```
-python3 game-Setup.py
+python3 script-Setup.py
 ```
