@@ -1,0 +1,2 @@
+# steering-wheel-opencv-mediapipe
+ Here I tried a small fun project using python OpenCV, mediapipe, and pydirectinput. Here we can control moves car game when yellow color come to right box (press key 'd') left box (press key 'a') left hand when thumb finger open (press key 'w') right hand when thumb finger open (press key 's')   This can be improved later by: Improving  press left and right to make them More realistic. Fixing some bugs in hand tracking.
