@@ -5,13 +5,10 @@ import imutils
 import numpy as np
 import time
 from pynput.keyboard import Key, Controller
-import pynput
-# keyboard = Controller()
-
 import pydirectinput
 
 # Handling our video object, zero value mean camera number 1
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 keyboard = Controller()
 
@@ -20,7 +17,7 @@ BLUE=(255,0,0)
 RED=(0,0,255)
 YELLOW=(51,51,51)
 
-# Time Delay
+# Time Delay this numbers just for initialization
 w_delay= 100
 d_delay=200
 a_delay=200
@@ -64,7 +61,6 @@ while True:
                 pydirectinput.keyUp('d')
                 pydirectinput.keyDown('a')
                 
-                key = True
             
         if x>303:
             if (time.time()-d_delay) >= 1:
@@ -72,7 +68,6 @@ while True:
                 pydirectinput.keyUp('a')
                 pydirectinput.keyDown('d')
                 
-                key = True
         break   
     
     
@@ -93,8 +88,6 @@ while True:
                     lmList.append([id , cx , cy])
                 else:
                     lmList2.append([id , cx , cy])
-                # Draw Circle on every handmark
-                # cv2.circle(frame,(cx, cy), 5, (255,0,255), cv2.FILLED)
             
             mpDraw.draw_landmarks(frame, handLms, mpHands.HAND_CONNECTIONS)
         
@@ -104,14 +97,12 @@ while True:
             s_delay = time.time() 
             pydirectinput.keyUp('w')
             pydirectinput.keyDown('s')
-                
 
         for i in range(2,5):   
             x1,y1 = lmList[i][1],lmList[i][2]
             cv2.circle(frame,(x1,y1),5,(255,0,255),cv2.FILLED)
         
         if len(lmList2) !=0:
-            
             for i in range(2,5):      
                 x1,y1 = lmList2[i][1],lmList2[i][2]
                 cv2.circle(frame,(x1,y1),5,(255,0,255),cv2.FILLED)
@@ -120,7 +111,6 @@ while True:
                 pydirectinput.keyDown('w')
                 w_delay = time.time()
             
-
     # Handling Release buttons
     if (time.time()-s_delay)>2: 
         s_delay = time.time()
