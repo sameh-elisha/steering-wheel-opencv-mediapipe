@@ -5,7 +5,7 @@ OpenCV (Open Source Computer Vision Library) is a library of programming functio
 
 Pygame is a cross-platform set of Python modules designed for writing video games. It includes computer graphics and sound libraries designed to be used with the Python programming language.
 
-# Opencv-Flabby-Bird
+# How it works
 Here we can control moves car game when yellow color come to; 
 right box (press key 'd')
 left box (press key 'a')
